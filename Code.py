@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 %matplotlib inline
 
 def domIntensity(im, k):
-    #YOUR CODE STARTS HERE
     h = im.shape[0]
     w = im.shape[1]
 
@@ -27,8 +26,6 @@ def domIntensity(im, k):
 
     for i in range (256):
         sorted_intensities[i]=color_r[intensities[i]]
-        
-    #YOUR CODE ENDS HERE
     return sorted_intensities[:k]
 
 def displayIntensityPalette(im, dom_list):
@@ -56,6 +53,6 @@ def displayIntensityPalette(im, dom_list):
     plt.yticks([])
     plt.title("Top 10 intensity Palette ")
 
-im = cv2.imread("C:\\Users\\Sanchita\\Desktop\\IVP_Assignment1\\lena_gray_256.tif")
+im = cv2.imread("..\\lena_gray_256.tif")
 dom_list = domIntensity(im,10)
 displayIntensityPalette(im, dom_list)
